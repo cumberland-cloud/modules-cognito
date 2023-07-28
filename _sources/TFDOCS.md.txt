@@ -1,0 +1,22 @@
+# Terraform Docs
+
+<!-- BEGIN_TF_DOCS -->
+
+
+## Modules
+
+No modules.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_cognito"></a> [cognito](#input\_cognito) | Cognito configuration object | <pre>object({<br>        access_group        = object({<br>            name            = string<br>            role_arn        = string<br>        })<br>        user_pool_name      = string<br>        user_schema         = optional(<br>            list(<br>                object({<br>                    mutable     = bool<br>                    name        = string<br>                })<br>            ), <br>            [{<br>                mutable         = true<br>                name            = "email"<br>            },{<br>                mutable         = true<br>                name            = "username"<br>            }]<br>        )<br><br>    })</pre> | n/a | yes |
+| <a name="input_domain"></a> [domain](#input\_domain) | Fully qualified domain name | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_user_pool"></a> [user\_pool](#output\_user\_pool) | Object containing the metadata for the provisioned Cognito User Pool, including the associated client. |
+<!-- END_TF_DOCS -->  
