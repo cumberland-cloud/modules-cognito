@@ -61,7 +61,7 @@ resource "aws_cognito_user_pool_client" "this" {
 
 resource "aws_cognito_user_group" "this" {
     description                             = "Cognito ${title(var.cognito.access_group.name)} Access Group"
-    name                                    = "${var.cognito.access_group.name}"
+    name                                    = var.cognito.access_group.name
     role_arn                                = var.cognito.access_group.role_arn
     user_pool_id                            = aws_cognito_user_pool.this.id
 }
