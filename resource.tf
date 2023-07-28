@@ -18,7 +18,7 @@ resource "aws_cognito_user_pool" "this" {
     }
 
     dynamic "schema" {
-        for_each                            = toset(local.user_schema)
+        for_each                            = toset(var.cognito.user_schema)
         
         content{
             name                            = schema.name
@@ -60,8 +60,8 @@ resource "aws_cognito_user_pool_client" "this" {
 }
 
 resource "aws_cognito_user_group" "this" {
-    description                             = "Access group for ${var.cognito.name}"
-    name                                    = "${var.cognito.access_group.name}"
+    description                             = "Cognito ${title(var.cognito.access_group.name)} Access Group"
+    name                                    = var.cognito.access_group.name
     role_arn                                = var.cognito.access_group.role_arn
     user_pool_id                            = aws_cognito_user_pool.this.id
 }

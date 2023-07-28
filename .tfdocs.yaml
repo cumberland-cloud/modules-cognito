@@ -1,0 +1,19 @@
+formatter: "markdown table"
+
+sections:
+  hide:
+    - resources
+    - requirements
+
+output:
+  file: ./docs/source/TFDOCS.md
+  mode: inject
+
+content: |-
+  {{ .Header }}
+
+  {{ .Modules }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}  

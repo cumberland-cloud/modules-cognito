@@ -1,9 +1,9 @@
-# Terraform Modules: KMS
+# Terraform Modules: Cognito 
 
-A Terraform module for deploying a KMS key and policy.
+[![terraform workflows](https://github.com/cumberland-cloud/modules-cognito/actions/workflows/action.yaml/badge.svg)](https://github.com/cumberland-cloud/modules-cognito/actions/workflows/action.yaml)
 
-Refer to [hosted docs]() for more information regarding this module.
+[![pages-build-deployment](https://github.com/cumberland-cloud/modules-cognito/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/cumberland-cloud/modules-cognito/actions/workflows/pages/pages-build-deployment)
 
-<!-- BEGIN_TF_DOCS -->
-Terraform Docs Placeholder
-<!-- END_TF_DOCS -->  
+A Terraform module for deploying a Cognito User Pool and client.
+
+Refer to [hosted docs](https://cumberland-cloud.github.io/modules-cognito/) for more information regarding this module.
