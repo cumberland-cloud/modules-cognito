@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 # NOTE: Add your project's information here.
-project = 'Cumberland CLoud'
+project = 'Cumberland Cloud'
 copyright = '2022'
 author = 'Grant Moore'
 release = '1.0.0'
