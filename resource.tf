@@ -18,7 +18,7 @@ resource "aws_cognito_user_pool" "this" {
     }
 
     dynamic "schema" {
-        for_each                            = toset(var.user_schema)
+        for_each                            = toset(var.cognito.user_schema)
         
         content{
             name                            = schema.name
