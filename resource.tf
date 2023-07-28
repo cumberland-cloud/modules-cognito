@@ -1,13 +1,3 @@
-locals {
-    user_schema                             = [{
-        mutable                             = true
-        name                                = "email"
-    },{
-        mutable                             = true
-        name                                = "username"
-    }]
-}
-
 resource "aws_cognito_user_pool" "this" {
     name                                    = var.cognito.user_pool_name
 
