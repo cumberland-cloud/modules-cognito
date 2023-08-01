@@ -1,5 +1,4 @@
 locals {
-    formatted_namespace                     = lower(replace(replace(var.namespace, "/", "-"), "_", "-"))
     tenant_attachments                      = flatten([
         for role_key, role in local.tenant_roles: [
             for policy_key, policy_arn in role.attachments: {
