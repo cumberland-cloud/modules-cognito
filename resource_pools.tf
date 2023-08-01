@@ -39,7 +39,7 @@ resource "aws_cognito_user_pool_client" "this" {
         "profile" 
     ]
     allowed_oauth_flows_user_pool_client    = true
-    callback_urls                           = [ "http://${var.domain}"]
+    callback_urls                           = [ "https://${var.domain}"]
     explicit_auth_flows                     = [
         "ALLOW_CUSTOM_AUTH",
         "ALLOW_REFRESH_TOKEN_AUTH",

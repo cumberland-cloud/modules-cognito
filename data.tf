@@ -2,8 +2,13 @@ data "aws_iam_policy_document" "tenant_assume_role" {
     statement {
         sid                 = "TenantTrustRelationship"
         effect              = "Allow"
-        actions             = [ "sts:AssumeRole" ]
+        actions             = [ "sts:AssumeRoleWithWebIdentity" ]
 
+        principals {
+            type            = "Federated"
+            identifiers     = [ "cognito-identity.amazonaws.com" ]
+        }
+        
         condition {
             test                = "StringEquals"
             variable            = "cognito-identity.amazonaws.com:aud"
