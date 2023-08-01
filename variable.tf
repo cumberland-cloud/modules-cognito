@@ -14,7 +14,7 @@ variable "cognito" {
                 name            = "email"
             },{
                 mutable         = true
-                name            = "username"
+                name            = "name"
             }]
         )
 
