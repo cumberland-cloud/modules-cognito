@@ -5,7 +5,7 @@ output "user_pool" {
         arn             = aws_cognito_user_pool.this.arn
         endpoint        = aws_cognito_user_pool.this.endpoint
         client_id       = aws_cognito_user_pool_client.this.id
-        group_ids       = aws_cognito_user_group.this[*].user_pool_id
+        group_ids       = [ for group in aws_cognito_user_group.this: group.user_pool_id ]
     }
 }
 
