@@ -1,10 +1,6 @@
 variable "cognito" {
     description             = "Cognito configuration object"
     type                    = object({
-        access_group        = object({
-            name            = string
-            role_arn        = string
-        })
         user_pool_name      = string
         user_schema         = optional(
             list(
@@ -27,5 +23,10 @@ variable "cognito" {
 
 variable "domain" {
     description             = "Fully qualified domain name"
+    type                    = string
+}
+
+variable "namespace" {
+    description             = "Namespace of the Cognito resources"
     type                    = string
 }
