@@ -21,10 +21,10 @@ resource "aws_cognito_user_pool" "this" {
         for_each                            = toset(var.cognito.user_schema)
         
         content{
-            name                            = schema.name
+            name                            = schema.value["name"]
             attribute_data_type             = "String"
             developer_only_attribute        = false
-            mutable                         = schema.mutable 
+            mutable                         = schema.value["mutable"] 
             required                        = true
         }
     }
