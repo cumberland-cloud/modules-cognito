@@ -15,9 +15,15 @@ locals {
     tenant_roles                            = {
         tenant_user                         = {
             name                            = "${var.namespace}-tenant-user"
+            attachments                     = {
+
+            }
         }
         tenant_admin                        = {
             name                            = "${var.namespace}-tenant-admin"
+            attachments                     = {
+                
+            }
         }
     }
 }
